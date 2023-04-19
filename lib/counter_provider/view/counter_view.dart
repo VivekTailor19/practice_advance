@@ -26,8 +26,6 @@ class _Counter_UIState extends State<Counter_UI> {
           child: Column(
             children: [
 
-
-
               Container(height: 100,width: 200,alignment: Alignment.center,
               child: Consumer<CounterProvider>(
                   builder: (context, value, child) =>

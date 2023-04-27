@@ -55,6 +55,7 @@ class _Gmail_UIState extends State<Gmail_UI> {
           type: StepperType.vertical,
 
 
+
           onStepContinue: () {
             spF!.stepcontinue();
 
@@ -72,6 +73,8 @@ class _Gmail_UIState extends State<Gmail_UI> {
 
           steps: [
             Step(
+              state: StepState.complete,
+                isActive: true,
                 title: Text("Registration"),
                 content: Column(
                   children: [

@@ -46,7 +46,7 @@ class _TimePicker_ScreenState extends State<TimePicker_Screen> {
 
                   spF!.timepick(ptime!);
                 },
-                child: Text("Date Pick")),
+                child: Text("Time Pick")),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

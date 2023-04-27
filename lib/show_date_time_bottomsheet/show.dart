@@ -44,6 +44,17 @@ class _Show_Date_Time_BottomSheetState
             ],
           ),
 
+          bottomNavigationBar: BottomNavigationBar(
+
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.person),label: "",backgroundColor: Colors.red,),
+              BottomNavigationBarItem(icon:Icon(Icons.ac_unit_outlined),label: ""),
+              BottomNavigationBarItem(icon:Icon(Icons.account_balance),label: ""),
+              BottomNavigationBarItem(icon:Icon(Icons.zoom_out_map_rounded),label: ""),
+
+            ],
+          ),
+
 
         ),
       ),

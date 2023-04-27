@@ -25,6 +25,7 @@ class _DatePicker_ScreenState extends State<DatePicker_Screen> {
           appBar: AppBar(
             title: Text("Date Picker"),
             centerTitle: true,
+            backgroundColor: Colors.black,
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -24,8 +24,9 @@ class _Show_Date_Time_BottomSheetState
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black,
-            title: Text("Show"),
+            title: Text("Show Date Time Bottomsheet"),
             bottom: TabBar(
+              indicatorColor: Colors.white,
 
 
               tabs: [
@@ -44,15 +45,20 @@ class _Show_Date_Time_BottomSheetState
             ],
           ),
 
-          bottomNavigationBar: BottomNavigationBar(
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.black,
+            child: Container(height: 45,
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Icon(Icons.person_2_rounded,color: Colors.white,),
+                  Icon(Icons.ac_unit_outlined,color: Colors.white,),
+                  Icon(Icons.account_balance,color: Colors.white,),
+                  Icon(Icons.zoom_out_map_rounded,color: Colors.white,),
+                ],
+              ),
+            ),
 
-            items: [
-              BottomNavigationBarItem(icon: Icon(Icons.person),label: "",backgroundColor: Colors.red,),
-              BottomNavigationBarItem(icon:Icon(Icons.ac_unit_outlined),label: ""),
-              BottomNavigationBarItem(icon:Icon(Icons.account_balance),label: ""),
-              BottomNavigationBarItem(icon:Icon(Icons.zoom_out_map_rounded),label: ""),
 
-            ],
           ),
 
 

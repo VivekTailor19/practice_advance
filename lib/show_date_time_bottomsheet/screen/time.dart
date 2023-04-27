@@ -25,6 +25,8 @@ class _TimePicker_ScreenState extends State<TimePicker_Screen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Time Picker"),
+          backgroundColor: Colors.black,
+          centerTitle: true,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

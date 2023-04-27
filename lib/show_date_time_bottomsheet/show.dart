@@ -23,13 +23,15 @@ class _Show_Date_Time_BottomSheetState
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.black,
             title: Text("Show"),
             bottom: TabBar(
+
 
               tabs: [
                 Tab(icon: Icon(Icons.date_range_rounded),text: 'Date',),
                 Tab(icon: Icon(Icons.timer_outlined),text: 'Time',),
-                Tab(icon: Icon(Icons.upload),text: 'Bottom\nSheet'),
+                Tab(icon: Icon(Icons.upload),text: 'BottomSheet'),
               ],
             ),
 
@@ -39,7 +41,6 @@ class _Show_Date_Time_BottomSheetState
               DatePicker_Screen(),
               TimePicker_Screen(),
               BottomSheet_Screen(),
-
             ],
           ),
 

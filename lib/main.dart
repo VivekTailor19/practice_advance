@@ -2,7 +2,9 @@
 
 import 'dart:io';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/counter_provider/provider/counter_provider.dart';
 import 'package:practice/counter_provider/view/counter_view.dart';
@@ -17,7 +19,9 @@ import 'ios_cupertino_widget/cupertino_practice.dart';
 
 void main() {
   runApp(
-    MultiProvider(
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => CounterProvider()),
         ChangeNotifierProvider(create: (context) => StepperProvider()),
@@ -27,7 +31,9 @@ void main() {
 
 
 
-      child: Platform.isAndroid == true ?
+      child:
+      //Platform.isIOS == true ?
+
         CupertinoApp(
           debugShowCheckedModeBanner: false,
           initialRoute: "cupertino",
@@ -35,25 +41,28 @@ void main() {
             "/":(context) => Cupertino_Practice(),
             "cupertino":(context) => Cupertino_Practice(),
           },
-        ) :
+        )
 
-        MaterialApp(
-          theme: ThemeData(
-            drawerTheme: DrawerThemeData(
-              backgroundColor: Color(0xffF2F6FC),
-              width: 200
-            )
-          ),
-          debugShowCheckedModeBanner: false,
-          initialRoute: 'show',
-          routes: {
-            "/":(context) => Counter_UI(),
-            "gmail":(context) => Gmail_UI(),
-            "show":(context) => Show_Date_Time_BottomSheet(),
-
-
-          },
-        ),
+                // :
+        //
+        // MaterialApp(
+        //   theme: ThemeData(
+        //     drawerTheme: DrawerThemeData(
+        //       backgroundColor: Color(0xffF2F6FC),
+        //       width: 200
+        //     )
+        //   ),
+        //   debugShowCheckedModeBanner: false,
+        //   initialRoute: 'show',
+        //   routes: {
+        //     "/":(context) => Counter_UI(),
+        //     "gmail":(context) => Gmail_UI(),
+        //     "show":(context) => Show_Date_Time_BottomSheet(),
+        //
+        //
+        //   },
+        // ),
     ),
+      ),
   );
 }

@@ -9,4 +9,26 @@ class iOSProvider extends ChangeNotifier
     tday = temp;
     notifyListeners();
   }
+
+
+  List<String> fruitNames = <String>[
+    'Apple',
+    'Mango',
+    'Banana',
+    'Orange',
+    'Pineapple',
+    'Strawberry',
+  ];
+
+  String fruit = "Select below";
+
+  void updatefruit(int index)
+  {
+    fruit = fruitNames[index];
+    notifyListeners();
+  }
+
+
+
+
 }

@@ -30,6 +30,7 @@ class _NewSliderState extends State<NewSlider> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CarouselSlider.builder(
                 itemCount: nspF!.slides.length,
@@ -68,12 +69,12 @@ class _NewSliderState extends State<NewSlider> {
                     .entries
                     .map(
                       (e) => Container(
-                          margin: EdgeInsets.all(2),
-                          height: 1.5.h,
-                          width: 1.54.h,
+                          margin: EdgeInsets.all(5),
+                          height: 2.h,
+                          width: 2.h,
                           decoration: BoxDecoration(
 
-                              color: nspT!.sliderindex == e.key ? Colors.red : Colors.yellow,
+                              color: nspT!.sliderindex == e.key ? Colors.red : Colors.red.shade50,
 
                               shape: BoxShape.circle)),
                     )

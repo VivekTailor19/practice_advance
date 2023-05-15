@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practice/login/share_prefer/login_share.dart';
 import 'package:sizer/sizer.dart';
 
 class Login_Splash extends StatefulWidget {
@@ -11,9 +12,16 @@ class Login_Splash extends StatefulWidget {
 
 class _Login_SplashState extends State<Login_Splash> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)  {
 
-    Future.delayed(Duration(seconds: 3), () => Navigator.pushReplacementNamed(context, 'l_done'), );
+
+    Future.delayed(Duration(seconds: 2), () async {
+      LoginShare aps = LoginShare();
+      Map m1 = await aps.readuser();
+
+      m1['flogin'] ? Navigator.pushReplacementNamed(context,"l_done") : Navigator.pushReplacementNamed(context,"l_signin");
+
+      }, );
 
 
     return SafeArea(

@@ -16,10 +16,13 @@ class _Login_SplashState extends State<Login_Splash> {
 
 
     Future.delayed(Duration(seconds: 2), () async {
+
       LoginShare aps = LoginShare();
       Map m1 = await aps.readuser();
 
-      m1['flogin'] ? Navigator.pushReplacementNamed(context,"l_done") : Navigator.pushReplacementNamed(context,"l_signin");
+      bool pass =  m1['flogin'];
+
+      pass ? Navigator.pushReplacementNamed(context,"l_done") : Navigator.pushReplacementNamed(context,"l_signin");
 
       }, );
 

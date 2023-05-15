@@ -12,6 +12,9 @@ import 'package:practice/counter_provider/view/counter_view.dart';
 import 'package:practice/drawer_n_stepper/gmaillogin.dart';
 import 'package:practice/drawer_n_stepper/stepper_provider.dart';
 import 'package:practice/ios_cupertino_widget/ios_provider.dart';
+import 'package:practice/login/screens/login_done.dart';
+import 'package:practice/login/screens/login_splash.dart';
+
 import 'package:practice/show_date_time_bottomsheet/show.dart';
 import 'package:practice/show_date_time_bottomsheet/showprovider.dart';
 import 'package:provider/provider.dart';
@@ -19,18 +22,22 @@ import 'package:sizer/sizer.dart';
 
 import 'carosel_slider_practice/carosel_slider_provider.dart';
 import 'ios_cupertino_widget/cupertino_practice.dart';
+import 'login/screens/login_signin.dart';
+import 'login/screens/login_signup.dart';
+
 
 void main() {
   runApp(
       DevicePreview(
         enabled: !kReleaseMode,
         builder: (context) => MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => CounterProvider()),
-        ChangeNotifierProvider(create: (context) => StepperProvider()),
-        ChangeNotifierProvider(create: (context) => ShowProvider()),
-        ChangeNotifierProvider(create: (context) => iOSProvider(),),
-        ChangeNotifierProvider(create: (context) => NewSliderProvider(),),
+          providers: [
+            ChangeNotifierProvider(create: (context) => CounterProvider()),
+            ChangeNotifierProvider(create: (context) => StepperProvider()),
+            ChangeNotifierProvider(create: (context) => ShowProvider()),
+            ChangeNotifierProvider(create: (context) => iOSProvider(),),
+            ChangeNotifierProvider(create: (context) => NewSliderProvider(),),
+
 
       ],
 
@@ -59,12 +66,16 @@ void main() {
               )
             ),
             debugShowCheckedModeBanner: false,
-            initialRoute: 'carosel',
+            initialRoute: 'l_splash',
             routes: {
               "/":(context) => Counter_UI(),
               "gmail":(context) => Gmail_UI(),
               "show":(context) => Show_Date_Time_BottomSheet(),
               "carosel":(context) => NewSlider(),
+              'l_splash':(context) => Login_Splash(),
+              'l_signup':(context) => Login_SignUp(),
+              'l_signin':(context) => Login_SignIn(),
+              'l_done':(context) => Login_Done(),
 
 
             },

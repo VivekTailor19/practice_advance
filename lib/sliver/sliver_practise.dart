@@ -24,7 +24,8 @@ class _Sliver_PracticeState extends State<Sliver_Practice> {
               pinned: true,
               // snap: true,
               floating: true,
-              // flexibleSpace: FlutterLogo(size: 80),
+              flexibleSpace: Align(alignment: Alignment.centerLeft,
+              child: FlutterLogo(size: 80)),
               // bottom: PreferredSize(
               //   child: Container(
               //     alignment: Alignment.centerLeft,

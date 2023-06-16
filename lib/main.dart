@@ -17,6 +17,7 @@ import 'package:practice/login/screens/login_splash.dart';
 
 import 'package:practice/show_date_time_bottomsheet/show.dart';
 import 'package:practice/show_date_time_bottomsheet/showprovider.dart';
+import 'package:practice/sliver/sliver_practise.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -66,7 +67,7 @@ void main() {
               )
             ),
             debugShowCheckedModeBanner: false,
-            initialRoute: 'l_splash',
+            initialRoute: 'slive',
             routes: {
               "/":(context) => Counter_UI(),
               "gmail":(context) => Gmail_UI(),
@@ -76,6 +77,7 @@ void main() {
               'l_signup':(context) => Login_SignUp(),
               'l_signin':(context) => Login_SignIn(),
               'l_done':(context) => Login_Done(),
+              "slive":(context) => Sliver_Practice()
 
 
             },
